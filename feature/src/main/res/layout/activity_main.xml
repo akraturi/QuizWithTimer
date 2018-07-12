@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/material"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/timerbutton"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="132dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawableLeft="@android:drawable/presence_away"
+        android:text="30s"
+        android:textAlignment="center"
+        android:textAppearance="@android:style/TextAppearance.Widget.Button"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/scorebutton"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless"
+        android:layout_width="141dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:drawableLeft="@android:drawable/btn_star_big_on"
+        android:text="0/0"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questextView"
+        android:layout_width="356dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="12dp"
+        android:fontFamily="serif"
+        android:text="31+65=?"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FFFFFF"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <android.support.v7.widget.GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="384dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/buttonA"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:onClick="chooseAns"
+            android:tag="0"
+            android:text="24"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/buttonB"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_orange_dark"
+            android:onClick="chooseAns"
+            android:tag="1"
+            android:text="24"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="0"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/buttonC"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_purple"
+            android:onClick="chooseAns"
+            android:tag="2"
+            android:text="24"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_column="0"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/buttonD"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_red_dark"
+            android:onClick="chooseAns"
+            android:tag="3"
+            android:text="24"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_columnWeight="1"
+            app:layout_row="1"
+            app:layout_rowWeight="1" />
+    </android.support.v7.widget.GridLayout>
+
+    <TextView
+        android:id="@+id/resulttextView"
+        android:layout_width="169dp"
+        android:layout_height="68dp"
+        android:layout_marginStart="133dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginBottom="65dp"
+        android:fontFamily="sans-serif"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/playAgainButton"
+        android:layout_width="196dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="106dp"
+        android:layout_marginEnd="82dp"
+        android:background="@drawable/playagain"
+        android:onClick="playAgain"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
